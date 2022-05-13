@@ -4,14 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemSlider</title>
+    <title>MemeSlider</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1 class="font-title">CSSMemSlider</h1>
+<body  class="page-wrapper">
+    <main> 
+        <section class="meme-section"> 
+            <h1 class="title font-title">CSSMemeSlider</h1>
+           
+            <div class="meme-slider">
+                <div class="meme-wrapper">
+                    <div class="meme">
+                        <img src="images/fix.jpg" alt="meme with Robert Downey Jr">
+                        <p class="meme-text font-main">Главный навык программиста</p>
+                    </div>
+                    <div class="meme">
+                        <img src="images/freelance.jpg" alt="freelancer-meme">
+                        <p class="meme-text font-main"></p>
+                    </div>
+                    <div class="meme">
+                        <img src="" alt="">
+                        <p class="meme-text font-main"></p>
+                    </div>
+                    <div class="meme">
+                        <img src="" alt="">
+                        <p class="meme-text font-main"></p>
+                    </div>
+                    <div class="meme">
+                        <img src="" alt="">
+                        <p class="meme-text font-main"></p>
+                    </div>
+                    <div class="meme">
+                            <img src="" alt="">
+                            <p class="meme-text font-main"></p>
+                    </div>
+            </div>
+            </div>
+            <div class="controls controls_hidden">
+                <input type="radio" name="slide-btn" id="slide1" checked>
+                <input type="radio" name="slide-btn" id="slide2">
+                <input type="radio" name="slide-btn" id="slide3">
+                <input type="radio" name="slide-btn" id="slide4">
+                <input type="radio" name="slide-btn" id="slide5">
+                <input type="radio" name="slide-btn" id="slide6">
+            </div>
+            <div class="labels">
+                <label class="radio-btn" for="slide1"></label>
+                <label class="radio-btn" for="slide2"></label>
+                <label class="radio-btn" for="slide3"></label>
+                <label class="radio-btn" for="slide4"></label>
+                <label class="radio-btn" for="slide5"></label>
+                <label class="radio-btn" for="slide6"></label>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
