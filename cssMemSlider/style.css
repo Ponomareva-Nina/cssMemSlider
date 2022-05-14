@@ -28,55 +28,78 @@
     height: 100vh;
 }
 .meme-section {
-    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+}
+.meme-slider {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
+    border: 2px solid red;
+    margin: auto;
+    overflow: hidden;
+    max-width: 500px;
 }
-.controls_hidden {
-    position: absolute;
-    visibility: hidden;
+.slider-track {
+    max-width: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
+    left: 0%;
+    transition: all 1s ease;
+}
+.meme {
+   min-width: 100%;
+   text-align: center;
+}
+.meme img {
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 20px;
+}
+.hidden {
+    display: none;
 }
 .labels {
     align-self: flex-end;
     display: flex;
     gap: 5px;
+    margin-top: 20px;
 }
-.radio-btn {
+.label {
     width: 15px;
     height: 15px;
     border: 2px solid #000000;
     border-radius: 100%;
+    cursor: pointer;
+    transition: all .8s ease;
 }
-.meme-slider {
-    min-width: 100%;
+.label:hover, 
+#slide1:checked ~ .labels #label1,
+#slide2:checked ~ .labels #label2,
+#slide3:checked ~ .labels #label3,
+#slide4:checked ~ .labels #label4,
+#slide5:checked ~ .labels #label5,
+#slide6:checked ~ .labels #label6  {
     background-color: aqua;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
 }
-.meme-wrapper{
-    min-width: 100%;
-    display: flex;
+#slide1:checked ~ .slider-track {
+    transform: translateX(0%);;
 }
-.meme {
-    min-width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
+#slide2:checked ~ .slider-track {
+    transform: translateX(-100%);
 }
-.meme img {
-    max-width: 100%;
-    border-radius: 20px;
+#slide3:checked ~ .slider-track {
+    transform: translateX(-200%);
 }
-.meme-text {
-    max-width: 65%;
+#slide4:checked ~ .slider-track {
+    transform: translateX(-300%);
 }
-.labels {
-    position: absolute;
-    bottom: 30px;
+#slide5:checked ~ .slider-track {
+    transform: translateX(-400%);
+}
+#slide6:checked ~ .slider-track {
+    transform: translateX(-500%);
 }

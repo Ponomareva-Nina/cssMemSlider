@@ -17,49 +17,45 @@
             <h1 class="title font-title">CSSMemeSlider</h1>
            
             <div class="meme-slider">
-                <div class="meme-wrapper">
-                    <div class="meme">
-                        <img src="images/fix.jpg" alt="meme with Robert Downey Jr">
-                        <p class="meme-text font-main">Главный навык программиста</p>
+                <input type="radio" class="hidden" name="slide-btn" id="slide1" checked>
+                <input type="radio" class="hidden" name="slide-btn" id="slide2">
+                <input type="radio" class="hidden" name="slide-btn" id="slide3">
+                <input type="radio" class="hidden" name="slide-btn" id="slide4">
+                <input type="radio" class="hidden" name="slide-btn" id="slide5">
+                <input type="radio" class="hidden" name="slide-btn" id="slide6">
+                
+                <div class="slider-track">
+                    <div class="meme" data-text="Когда начинаешь делать задание до выдачи">
+                        <img src="images/dart.jpg" alt="meme with Luke Skywalker">
                     </div>
-                    <div class="meme">
-                        <img src="images/freelance.jpg" alt="freelancer-meme">
-                        <p class="meme-text font-main"></p>
-                    </div>
-                    <div class="meme">
-                        <img src="" alt="">
-                        <p class="meme-text font-main"></p>
-                    </div>
-                    <div class="meme">
-                        <img src="" alt="">
-                        <p class="meme-text font-main"></p>
+                    <div class="meme" data-text="">
+                        <img src="images/google.jpg" alt="monkey puppet meme">
                     </div>
                     <div class="meme">
                         <img src="" alt="">
-                        <p class="meme-text font-main"></p>
                     </div>
                     <div class="meme">
-                            <img src="" alt="">
-                            <p class="meme-text font-main"></p>
+                        <img src="" alt="">
                     </div>
+                    <div class="meme">
+                        <img src="" alt="">
+                    </div>
+                    <div class="meme">
+                        <img src="" alt="">
+                    </div>
+                </div>
+
+                <div class="labels">
+                    <label class="label" id="label1" for="slide1"></label>
+                    <label class="label" id="label2" for="slide2"></label>
+                    <label class="label" id="label3" for="slide3"></label>
+                    <label class="label" id="label4" for="slide4"></label>
+                    <label class="label" id="label5" for="slide5"></label>
+                    <label class="label" id="label6" for="slide6"></label>
+                </div>
+                 
             </div>
-            </div>
-            <div class="controls controls_hidden">
-                <input type="radio" name="slide-btn" id="slide1" checked>
-                <input type="radio" name="slide-btn" id="slide2">
-                <input type="radio" name="slide-btn" id="slide3">
-                <input type="radio" name="slide-btn" id="slide4">
-                <input type="radio" name="slide-btn" id="slide5">
-                <input type="radio" name="slide-btn" id="slide6">
-            </div>
-            <div class="labels">
-                <label class="radio-btn" for="slide1"></label>
-                <label class="radio-btn" for="slide2"></label>
-                <label class="radio-btn" for="slide3"></label>
-                <label class="radio-btn" for="slide4"></label>
-                <label class="radio-btn" for="slide5"></label>
-                <label class="radio-btn" for="slide6"></label>
-            </div>
+           
         </section>
     </main>
 </body>
