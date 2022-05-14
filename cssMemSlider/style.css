@@ -10,7 +10,7 @@
 }
 .font-main {
     font-family: 'Ubuntu', 'Arial', sans-serif;
-    font-size: 20px;
+    font-size: 1.5em;
     line-height: 110%;
     font-weight: 400;
     font-style: normal;
@@ -32,31 +32,33 @@
     padding: 10px;
 }
 .meme-slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid red;
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
     max-width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .slider-track {
     max-width: 500px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-start;
     position: relative;
     left: 0%;
-    transition: all 1s ease;
+    transition: all .8s ease;
 }
 .meme {
-   min-width: 100%;
-   text-align: center;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .meme img {
     width: 100%;
-    object-fit: scale-down;
     border-radius: 20px;
 }
 .hidden {
@@ -64,9 +66,13 @@
 }
 .labels {
     align-self: flex-end;
+    width: 40%;
+    box-sizing: border-box;
     display: flex;
+    justify-content: flex-end;
     gap: 5px;
-    margin-top: 20px;
+    position: relative;
+    top: -70px;
 }
 .label {
     width: 15px;
@@ -76,6 +82,16 @@
     cursor: pointer;
     transition: all .8s ease;
 }
+.description {
+    width: 60%;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+/* добавляем поведение для слайдера 
+(закрашиваем нужный переключатель и сдвигаем изображение) */ 
 .label:hover, 
 #slide1:checked ~ .labels #label1,
 #slide2:checked ~ .labels #label2,
@@ -86,7 +102,7 @@
     background-color: aqua;
 }
 #slide1:checked ~ .slider-track {
-    transform: translateX(0%);;
+    transform: translateX(0%);
 }
 #slide2:checked ~ .slider-track {
     transform: translateX(-100%);
@@ -102,4 +118,15 @@
 }
 #slide6:checked ~ .slider-track {
     transform: translateX(-500%);
+}
+
+/* добавляем эффект появления для текста */ 
+#slide1:checked ~ .slider-track #text_for_slide_1,
+#slide2:checked ~ .slider-track #text_for_slide_2,
+#slide3:checked ~ .slider-track #text_for_slide_3,
+#slide4:checked ~ .slider-track #text_for_slide_4,
+#slide5:checked ~ .slider-track #text_for_slide_5,
+#slide6:checked ~ .slider-track #text_for_slide_6 {
+    opacity: 1;
+    transform: translateY(0px);
 }
