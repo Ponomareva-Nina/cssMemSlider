@@ -1,3 +1,9 @@
+:root {
+    --main-bg-color: #000000;
+    --hover-color: rgb(167, 125, 49);;
+    --text-color: rgb(253, 253, 245);
+    --label-color: rgb(253, 253, 245);
+}
 .font-title {
     font-family: 'Ubuntu', 'Arial', sans-serif;
     font-size: 2em;
@@ -5,15 +11,13 @@
     line-height: 130%;
     font-style: normal;
 }
-.title {
-    display: none;
-}
 .font-main {
     font-family: 'Ubuntu', 'Arial', sans-serif;
     font-size: 1.5em;
     line-height: 110%;
     font-weight: 400;
     font-style: normal;
+    color: var(--text-color)
 }
 .font-italic {
     font-family: 'Ubuntu', 'Arial', sans-serif;
@@ -23,20 +27,26 @@
     font-style: italic;
 }
 .page-wrapper {
-    background: linear-gradient(90deg, #fff 0%, rgba(85, 85, 85, 0.705) 50%, #777 100%);
+    background: var(--main-bg-color) url(images/background.jpg) no-repeat right bottom fixed;
+    width: 100vw;
+    height: 100%;
+}
+.title {
+    color: var(--text-color);
+    text-align: center;
 }
 .meme-section {
-    margin: 0 auto;
-    padding: 10px;
-    width: 100%;
-    height: 100vh;
+    margin: auto;
+    padding-bottom: 20px;
+    width: 80%;
 }
 .meme-slider {
     margin: 0 auto;
     overflow: hidden;
-    max-width: 50%;
+    max-width: 600px;
+    width: 60%;
     display: grid;
-    grid-template-columns: 6fr 4fr;
+    grid-template-columns: 7fr 3fr;
     grid-auto-flow: row;
     align-items: center;
     gap: 10px;
@@ -52,7 +62,6 @@
     min-width: 100%;
     max-width: 100%;
     padding: 0 5px;
-    border: 2px red solid;
     box-sizing: border-box;
 }
 .meme img {
@@ -60,9 +69,7 @@
     border-radius: 20px;
 }
 .hidden {
-   visibility: hidden;
-   height: 0;
-   width: 0;
+   display: none;
 }
 .labels {
     box-sizing: border-box;
@@ -73,7 +80,7 @@
 .label {
     width: 15px;
     height: 15px;
-    border: 2px solid #000000;
+    border: 2px solid var(--label-color);
     border-radius: 100%;
     cursor: pointer;
     transition: all .8s ease;
@@ -96,14 +103,17 @@
 
 /* добавляем поведение для слайдера 
 (закрашиваем нужный переключатель и сдвигаем изображение) */ 
-.label:hover, 
+.label:hover {
+    transform: scale(1.2);
+}
+
 #slide1:checked ~ .labels #label1,
 #slide2:checked ~ .labels #label2,
 #slide3:checked ~ .labels #label3,
 #slide4:checked ~ .labels #label4,
 #slide5:checked ~ .labels #label5,
 #slide6:checked ~ .labels #label6  {
-    background-color: aqua;
+    background-color: var(--hover-color);
 }
 #slide1:checked ~ .slider-track {
     transform: translateX(0%);
