@@ -24,55 +24,51 @@
 }
 .page-wrapper {
     background: linear-gradient(90deg, #fff 0%, rgba(85, 85, 85, 0.705) 50%, #777 100%);
-    width: 100%;
-    height: 100vh;
 }
 .meme-section {
     margin: 0 auto;
     padding: 10px;
+    width: 100%;
+    height: 100vh;
 }
 .meme-slider {
     margin: 0 auto;
     overflow: hidden;
-    max-width: 500px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-auto-flow: row;
+    align-items: center;
+    gap: 10px;
 }
 .slider-track {
-    max-width: 500px;
+    grid-column: span 2;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    position: relative;
-    left: 0%;
     transition: all .8s ease;
 }
 .meme {
     min-width: 100%;
     max-width: 100%;
     padding: 0 5px;
+    border: 2px red solid;
     box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 .meme img {
     width: 100%;
     border-radius: 20px;
 }
 .hidden {
-    display: none;
+   visibility: hidden;
+   height: 0;
+   width: 0;
 }
 .labels {
-    align-self: flex-end;
-    width: 40%;
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
     gap: 5px;
-    position: relative;
-    top: -70px;
 }
 .label {
     width: 15px;
@@ -83,11 +79,19 @@
     transition: all .8s ease;
 }
 .description {
-    width: 60%;
     text-align: left;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.5s ease;
+    margin: 0;
+}
+#text_for_slide_1,
+#text_for_slide_2,
+#text_for_slide_3,
+#text_for_slide_4,
+#text_for_slide_5,
+#text_for_slide_6 {
+    visibility: hidden;
+    height: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease;
 }
 
 /* добавляем поведение для слайдера 
@@ -121,12 +125,13 @@
 }
 
 /* добавляем эффект появления для текста */ 
-#slide1:checked ~ .slider-track #text_for_slide_1,
-#slide2:checked ~ .slider-track #text_for_slide_2,
-#slide3:checked ~ .slider-track #text_for_slide_3,
-#slide4:checked ~ .slider-track #text_for_slide_4,
-#slide5:checked ~ .slider-track #text_for_slide_5,
-#slide6:checked ~ .slider-track #text_for_slide_6 {
-    opacity: 1;
-    transform: translateY(0px);
+#slide1:checked ~ .text #text_for_slide_1,
+#slide2:checked ~ .text #text_for_slide_2,
+#slide3:checked ~ .text #text_for_slide_3,
+#slide4:checked ~ .text #text_for_slide_4,
+#slide5:checked ~ .text #text_for_slide_5,
+#slide6:checked ~ .text #text_for_slide_6 {
+    visibility: visible;
+    height: auto;
+    transform: translateY(0%);
 }
