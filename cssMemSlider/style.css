@@ -110,7 +110,6 @@
 .label:hover {
     transform: scale(1.2);
 }
-
 #slide1:checked ~ .labels #label1 .control,
 #slide2:checked ~ .labels #label2 .control,
 #slide3:checked ~ .labels #label3 .control,
@@ -148,4 +147,39 @@
     visibility: visible;
     height: auto;
     transform: translateY(0%);
+}
+
+/* cтили для планшетов и мобильных устройств */
+
+@media only screen and (max-width: 1180px) and (min-width: 767px){
+    .page-wrapper {
+        background: var(--main-bg-color);
+    }
+    .meme-section {
+        width: 80%;
+    }
+    .meme-slider {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .page-wrapper {
+        background: var(--main-bg-color);
+    }
+    .meme-section {
+        width: 90%;
+    }
+    .meme-slider {
+        width: 90%;
+        grid-template-columns: 100%;
+    }
+    .slider-track {
+        grid-column: span 1;
+        order: -2;
+    }
+    .labels {
+        justify-content: center;
+        order: -1;
+    }
 }
