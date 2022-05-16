@@ -83,13 +83,13 @@
     width: fit-content;
     padding: 0.6rem 0.3rem;
     cursor: pointer;
-    transition: all .6s ease;
 }
 .control {
     width: 0.9rem;
     height: 0.9rem;
-    border: 3px solid var(--label-color);
+    border: 0.18rem solid var(--label-color);
     border-radius: 100%;
+    transition: all .6s ease;
 }
 
 .description {
@@ -109,11 +109,15 @@
 }
 
 /* добавляем поведение для контролов и слайдера */ 
-.label:hover {
-    transform: scale(1.2);
-}
+
 .label:hover .control {
     box-shadow: 0 0 3px 2px var(--hover-color);
+    transform: scale(1.1);
+}
+.label:active .control {
+    box-shadow: inset 0 0 3px 2px var(--hover-color),
+    0 0 3px 2px var(--hover-color);
+    transform: scale(1.1);
 }
 
 #slide1:checked ~ .labels #label1 .control,
@@ -122,7 +126,7 @@
 #slide4:checked ~ .labels #label4 .control,
 #slide5:checked ~ .labels #label5 .control,
 #slide6:checked ~ .labels #label6 .control  {
-    background-color: var(--hover-color);
+     background-color: var(--hover-color);
 }
 #slide1:checked ~ .slider-track {
     transform: translateX(0%);
