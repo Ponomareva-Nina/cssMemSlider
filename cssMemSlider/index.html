@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeSlider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body  class="page-wrapper">
+    <main> 
+        <section class="meme-section"> 
+            <h1 class="title font-title">Meme Slider on Pure CSS</h1>
+           
+            <div class="meme-slider">
+                <input type="radio" class="hidden" name="slide-btn" id="slide1" checked>
+                <input type="radio" class="hidden" name="slide-btn" id="slide2">
+                <input type="radio" class="hidden" name="slide-btn" id="slide3">
+                <input type="radio" class="hidden" name="slide-btn" id="slide4">
+                <input type="radio" class="hidden" name="slide-btn" id="slide5">
+                <input type="radio" class="hidden" name="slide-btn" id="slide6">
+
+                <div class="slider-track font-main">
+                    <div class="meme">
+                        <img src="images/open.jpg" alt="open your eyes">
+                    </div> 
+                    <div class="meme">
+                        <img src="images/dart.jpg" alt="meme with Luke Skywalker">
+                     </div>
+                    <div class="meme">
+                        <img src="images/console_log.jpg" alt="console.log">
+                     </div>
+                    <div class="meme">
+                        <img src="images/google.jpg" alt="monkey puppet meme">
+                     </div>
+                    <div class="meme">
+                        <img src="images/regex.jpg" alt="meme with shouting kid">
+                     </div>
+                    <div class="meme">
+                        <img src="images/w3c.jpg" alt="lego problem">
+                    </div>
+                </div>  
+                <div class="text font-main">
+                    <p class="description" id="text_for_slide_1">Когда лег спать, но вдруг понял почему в коде баг</p>
+                    <p class="description" id="text_for_slide_2">Когда начинаешь делать задание RS School до выдачи</p>
+                    <p class="description" id="text_for_slide_3">Я пишу на JavaScript</p>
+                    <p class="description" id="text_for_slide_4">Ну как сказать, как сказать...</p>
+                    <p class="description" id="text_for_slide_5">Почему ты не можешь быть нормальным?</p>
+                    <p class="description" id="text_for_slide_6">А также &#34;посмотри в спецификации&#34;</p>
+                </div>
+                
+                <div class="labels">
+                    <label class="label" id="label1" for="slide1"><div class="control"></div></label>
+                    <label class="label" id="label2" for="slide2"><div class="control"></div></label>
+                    <label class="label" id="label3" for="slide3"><div class="control"></div></label>
+                    <label class="label" id="label4" for="slide4"><div class="control"></div></label>
+                    <label class="label" id="label5" for="slide5"><div class="control"></div></label>
+                    <label class="label" id="label6" for="slide6"><div class="control"></span></label>
+                </div>
+
+            </div>
+           
+        </section>
+    </main>
+</body>
+</html>
