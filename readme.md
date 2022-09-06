@@ -1,9 +1,7 @@
 1. task: https://github.com/rolling-scopes-school/tasks/blob/master/tasks/css-mem-slider/README.md
-2. screenshot:
-css-slider_screenshot
-3. Deploy: https://ponomareva-nina.github.io/cssMemSlider/cssMemSlider/index.html
-4. Done 16.05.2022 / deadline 17.05.2022
-5. Score: 150/150
+2. Deploy: https://ponomareva-nina.github.io/cssMemSlider/cssMemSlider/index.html
+3. Done 16.05.2022 / deadline 17.05.2022
+4. Score: 150/150
 
 Выполненные требования:
 
